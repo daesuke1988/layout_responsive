@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<HTML>
+ <head>
+ <title>Layout Web</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" type="text/css" href="style.css">
+ <link rel="stylesheet" type="text/css" href="mediaquery.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>
+		$(function() {
+			var pull 		= $('#pull'); // Variabel tombol navigasi (akan muncul hanya pada perangkat mobile)
+				menu 		= $('nav ul'); // Variabel menu
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 600 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+	</script>
+ </head>
+ <body>
+	<header>
+        <h1 class="judul"> Warung Kopi</h1>
+    </header>
+ <div id="wrapper">
+	<nav class="clearfix">
+		<a href="#" id="pull"> Menu</a>
+		<ul class="clearfix">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="service.html">Service</a></li>
+			<li><a href="about.html">About Us</a></li>
+			<li><a href="contactus.html" class="active">Contact Us</a></li>
+		</ul>
+		<input type="text" name="search"  placeholder="Search.."/>
+	</nav>
+	<div id="sidebar">
+		<div class="widget">
+			<h2>Who we are?</h2>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+				Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+				Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.  
+			</p>
+		</div>
+		<div class="widget">
+			<h2>Artikel berdasarkan kategori</h2>
+			<ul>
+				<li><a href="">HTML dan CSS</a></li>
+				<li><a href="">Javascript</a></li>
+				<li><a href="">Photoshop</a></li>
+				<li><a href="">Inspirasi</a></li>
+				<li><a href="">Berita</a></li>
+				<li><a href="">Off Topic</a></li>
+			</ul>
+		</div>
+	</div><!-- Penutup div "sidebar" -->
+	<div id="daftar-artikel">
+		<div class="artikel">
+			<div class="container">
+				<form action="/action_page.php">
+				<div class="row">
+					<div class="col-25">
+					<label for="fname">Your name</label>
+					</div>
+					<div class="col-75">
+					<input type="text" id="fname" name="firstname" placeholder="Your name..">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+					<label for="lname">Skype</label>
+					</div>
+					<div class="col-75">
+					<input type="text" id="lname" name="lastname" placeholder="Your Skype">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+					<label for="lname">Email </label>
+					</div>
+					<div class="col-75">
+					<input type="text" id="lname" name="lastname" placeholder="Your Email Address">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+					<label for="lname">Topic</label>
+					</div>
+					<div class="col-75">
+					<input type="text" id="lname" name="lastname" placeholder="Your Topic">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-25">
+					<label for="subject">Message</label>
+					</div>
+					<div class="col-75">
+					<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<input type="submit" value="Submit">
+				</div>
+				</form>
+			</div>
+		</div>
+
+	  	<!-- <div class="artikel">	
+			<h3>Send us a message</h3>
+			<div class="form_contact">				 
+				<form id="myform" action="">
+				<p><label for="">Your name</label>
+				  <input type="text"></p>
+				<p><label for="">Skype</label>
+				  <input type="text"></p>
+				<p><label for="">Email Address</label>
+				  <input type="text"></p>
+				<p><label for="">Topic</label>
+				  <input type="text"></p>
+				<p class="full-width">
+				  <label for="">Write your message</label>
+				  <textarea name="" id="" cols="30" rows="7"></textarea></p>
+				<p class="full-width">
+				  <button>Send</button></p>
+				</form>
+			</div>	 -->
+		<!-- </div>Penutup div "artikel"	 -->
+	</div><!-- Penutup div "daftar-artikel" -->
+	<div id="footer">
+		<p>Desain Web copyright 2021 by Agus Kresnanto</p>
+	</div>
+ </div><!-- Penutup div "wrapper" -->
+ </body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(".togel.tblmenu").click(function () {
+	$(".menu").toggleClass("sh");
+	});
+</script>

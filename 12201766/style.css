@@ -1,0 +1,328 @@
+/* atur ulang margin dan padding agar tidak 
+menggunakan style bawaan dari browser  */
+*{
+	margin:0;
+	padding:0;
+	font-family:calibri, ‚segoe ui, arial, tahoma, sans-serif;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+/* background dari desain web berwarna abu-abu */
+body{
+	background-image: url('images/background_coffe.jpeg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	max-width: 100%;
+}
+
+#wrapper{
+	width : 780px;
+	margin: 0 auto; /* auto menyebabkan rata tengah */
+	overflow: hidden; /* krn element child ada yg 
+						make floating */
+}
+
+header{
+    text-align: center;
+    color: #fff;
+}
+
+header .judul{
+	font-family: 'Marck Script', cursive;
+    font-size: 60pt;
+	color: #b38867;
+}
+
+header img{
+	margin-top: 10px;
+    width:400px;
+}
+
+#header{
+	background: url(images/header.jpg) repeat-x #b38867;
+	height : 70px;	
+	padding:5px;
+	margin : 20px 0;
+	overflow : hidden;
+	border-radius: 10px;	
+}
+#header img{ margin-left:20px; width:40px; }
+
+#menu-utama{
+	margin-top:3px;
+	list-style:none;
+}
+
+#menu-utama li{
+	float:left;
+	padding:8px 20px;
+	border-right:1px solid #555555;
+}
+
+#menu-utama li a{
+	color : #ffffff;
+	text-decoration:none;
+}
+
+#header form{
+	float:right;
+	margin-top:-10px;
+	margin-right: 10px;
+}
+
+#daftar-artikel{
+	width:470px;
+	float:left;
+}
+.artikel{
+	background:#ddbc95;
+	padding:10px;
+	margin-bottom:20px;
+	overflow:hidden;
+	border-radius: 10px;
+}
+.artikel img{
+	/* float:left; */
+	margin-right:10px;
+	margin-bottom: 10px;
+	max-width: 100%;
+  	height: auto;
+	border-radius: 10px;	
+}
+
+.artikel b{
+	color:#616060;
+	background:#f7efe2;
+	padding:3px;
+	font-size:12px;
+	font-weight:bold;
+	margin-right:10px;
+	border-radius: 3px;
+}
+
+.artikel p{
+ 	font-size: 12px;
+	margin:10px 0;
+	text-align:justify;
+	text-indent: 50px;
+  	letter-spacing: 3px;
+}
+
+.artikel a{
+	display:block;
+	text-align:right;
+	color:#636363;
+}
+
+#sidebar{
+	width:270px;
+	float:right;
+}
+
+#sidebar h2{
+	font-size:18px;
+	margin:10px 0;
+}
+
+#sidebar p{
+	line-height:20px;
+	color : #636363;
+}
+
+#sidebar ul li a{
+	color:#636363;
+	text-decoration:none;
+}
+
+#sidebar ul {
+	margin-left : 25px;
+}
+
+#sidebar .widget{
+    padding: 25px;
+    margin: 0 0 25px;
+    background: #ddbc95;
+    border-bottom: 2px solid #ddbc95;
+    transition: all 0.5s ease;
+	border-radius: 10px;
+}
+
+#sidebar .widget p{
+    font-size: 16px;
+	text-align: justify;
+}
+
+#footer{
+	clear:both;
+	margin:20px 0;
+	text-align:center;
+	background-color: #b38867;
+	padding:5px;
+	color:#ffffff;
+	border-radius: 5px;
+}
+
+.form_contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#myform {
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.full-width {
+    grid-column: 1 / 2;   
+}
+
+#myform label {
+  display: block;
+}
+
+.form_contact p {
+  margin: 0;
+}
+
+#myform button,input, textarea {
+  	padding: 0.5em;
+}
+
+button {
+  background: lightgrey;
+  width: 100%;
+  border: 0;
+}
+
+button:hover, button:focus {
+  background: gold;
+  outline: 0;
+}
+
+.form_contact input:focus,textarea:focus {
+  outline: 3px solid gold;
+}
+
+nav {
+	margin-top:2%;
+	height : 50px;
+	margin : 20px 0;	
+	width: 100%;
+	background: #b38867;
+	font-size: 11pt;
+	font-family: 'PT Sans', Arial, sans-serif;
+	font-weight: bold;
+	position: relative;
+	border-radius: 5px;
+}
+nav ul {
+	padding: 0;
+	margin: 0 auto;
+	width: 500px;
+	height: 50px;
+	float: left;
+}
+nav li {
+	display: inline;
+	float: left;
+}
+nav a {
+	color: #ffffff;
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 50px;
+}
+nav a:hover, nav a:active {
+	background-color: #ecf0f1;
+	color: #333;
+}
+nav a#pull {
+	display: none;
+}
+
+nav input[type=text] {
+	float: right;
+	padding: 6px;
+	border: none;
+	margin-top: 8px;
+	margin-right: 16px;
+	font-size: 17px;
+	border-radius: 5px;
+}
+
+.active{
+	background-color:#A0522D;
+	color:#fff;
+   
+  }
+  
+label {
+	padding: 12px 12px 12px 0;
+	display: inline-block;
+}
+  
+input[type=submit] {
+	background-color: #04AA6D;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right;
+}
+  
+input[type=submit]:hover {
+	background-color: #45a049;
+}
+  
+.container {
+	border-radius: 5px;
+	background-color: #ddbc95;
+	padding: 20px;
+	margin-right: 25px;
+}
+
+.container input[type=text], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	resize: vertical;
+}
+  
+.col-25 {
+	float: left;
+	width: 25%;
+	margin-top: 6px;
+}
+  
+.col-75 {
+	float: left;
+	width: 75%;
+	margin-top: 6px;
+}
+  
+  /* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+

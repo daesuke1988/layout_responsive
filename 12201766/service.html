@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<HTML>
+ <head>
+ <title>Latihan Markup</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="style.css" />
+ <link rel="stylesheet" type="text/css" href="mediaquery.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>
+		$(function() {
+			var pull 		= $('#pull'); // Variabel tombol navigasi (akan muncul hanya pada perangkat mobile)
+				menu 		= $('nav ul'); // Variabel menu
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 600 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+	</script>
+ </head>
+ <body>
+	<header>
+        <h1 class="judul"> Warung Kopi</h1>
+    </header>
+ <div id="wrapper">
+	<nav class="clearfix">
+		<a href="#" id="pull"> Menu</a>
+		<ul class="clearfix">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="service.html" class="active">Service</a></li>
+			<li><a href="about.html">About Us</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+		</ul>
+		<input type="text" name="search"  placeholder="Search.."/>
+	</nav>
+	<div id="sidebar">
+		<div class="widget">
+			<h2>Who we are?</h2>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+				Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+				Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.  
+			</p>
+		</div>
+		<div class="widget">
+			<h2>Artikel berdasarkan kategori</h2>
+			<ul>
+				<li><a href="">HTML dan CSS</a></li>
+				<li><a href="">Javascript</a></li>
+				<li><a href="">Photoshop</a></li>
+				<li><a href="">Inspirasi</a></li>
+				<li><a href="">Berita</a></li>
+				<li><a href="">Off Topic</a></li>
+			</ul>
+		</div>
+	</div><!-- Penutup div "sidebar" -->
+	<div id="daftar-artikel">
+		 <div class="artikel">
+			 <img src="images/coffe1.jpeg" alt="Gambar Artikel" />
+			 <br>
+			 <h1> Ini Page Service </h1>
+			 <b>Feb 12, 2007</b><b>Views : 3,487,497</b>
+			 <p>Bill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac ads.
+			Bill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac adsBill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac adsBill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac adsBill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac adsBill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac adsBill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac adsBill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac adsBill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac adsBill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac adsBill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac adsBill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac adsBill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac adsBill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac adsBill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac adsBill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac adsBill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac adsBill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac adsBill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac adsBill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac adsBill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac adsBill Gates and Steve Jobs square off in the clean
+			white virtual world of the iconic Mac ads</p>
+		 </div><!-- Penutup div "artikel" -->
+		 
+	</div><!-- Penutup div "daftar-artikel" -->
+	<div id="footer">
+		<p>Desain Web copyright 2021 by Agus Kresnanto</p>
+	</div>
+ </div><!-- Penutup div "wrapper" -->
+ </body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(".togel.tblmenu").click(function () {
+	$(".menu").toggleClass("sh");
+	});
+</script>
